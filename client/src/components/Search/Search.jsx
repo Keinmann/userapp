@@ -3,10 +3,17 @@ import Magnifier from "../../assets/Magnifier.svg";
 import { ReactPropTypes, useState } from "react";
 
 function Search({ getUserData }) {
+	let isUpdated = false;
 	const [searchString, setSearchString] = useState(String);
 	const handleChange = (value) => {
 		setSearchString(value.trim());
-		getUserData(searchString);
+		if (searchString.length > 2) {
+			isUpdated = false;
+			getUserData(searchString);
+		} else if (isUpdated == false) {
+			isUpdated = true;
+			getUserData();
+		}
 	};
 
 	return (

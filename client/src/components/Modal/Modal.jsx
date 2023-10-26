@@ -1,12 +1,8 @@
 import "./Modal.scss";
 import Cross from "../../assets/Cross.svg";
-import { ReactPropTypes, useEffect } from "react";
+import { ReactPropTypes } from "react";
 
 function Modal({ setShowModal, user }) {
-	useEffect(() => {
-		console.log(user);
-	}, []);
-
 	return (
 		<div className="modal-container">
 			<div
