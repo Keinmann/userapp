@@ -1,11 +1,13 @@
 {
-  "name": "userapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "keinmann@mail.ru",
-  "license": "ISC"
+	"name": "userapp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"deploy": "(cd server && npm install) && (cd client && npm install)",
+		"server": "cd server && npm run start",
+		"client": "cd client && npm run dev"
+	},
+	"author": "keinmann@mail.ru",
+	"license": "ISC"
 }
