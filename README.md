@@ -4,11 +4,13 @@
 
 ### Installation:
 
-from ./:
+from ./ :
 
 npm run install
 
 ### Start:
+
+from ./ :
 
 Needs two different terminals, in each:
 
