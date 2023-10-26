@@ -4,11 +4,13 @@ import User from "../User/User";
 import { useEffect, useState } from "react";
 
 function App() {
-	const [userData, setUserData] = useState([]);
+	const [userData, setUserData] = useState(Array);
 
-	async function getUserData() {
+	async function getUserData(searchString = "") {
 		try {
-			const response = await fetch("http://127.0.0.1:3000/");
+			const response = await fetch(
+				`http://127.0.0.1:3000?term=${searchString}`
+			);
 			const json = await response.json();
 			setUserData(json);
 		} catch (err) {
@@ -22,7 +24,7 @@ function App() {
 
 	return (
 		<div className="app">
-			<Search />
+			<Search getUserData={getUserData} />
 			<div className="app_list">
 				{userData?.map((user, key) => (
 					<User key={key} user={user} />

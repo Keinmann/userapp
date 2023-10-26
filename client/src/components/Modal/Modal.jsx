@@ -9,6 +9,12 @@ function Modal({ setShowModal, user }) {
 
 	return (
 		<div className="modal-container">
+			<div
+				className="overlay"
+				onClick={() => {
+					setShowModal(false);
+				}}
+			/>
 			<div className="modal">
 				<div className="modal_header">
 					<h2 className="modal_header_field">{user.name}</h2>
