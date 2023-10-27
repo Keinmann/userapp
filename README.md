@@ -19,3 +19,8 @@ npm run server
 or
 
 npm run client
+
+##FOR INSTANCE:
+
+task 1(frontend) is a whole project
+task 2(backend query) is in ./query_task
